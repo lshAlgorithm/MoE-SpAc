@@ -1,4 +1,9 @@
 # MoE-SpAc
+<p align="center">
+ | <a href="https://arxiv.org/pdf/2401.15077.pdf"><b>Arxiv Preprint</b></a> |
+   <a href="https://arxiv.org/pdf/2401.15077.pdf"><b>Huggingface Preprint</b></a> |
+</p>
+
 Mixture-of-Experts (MoE) models enable scalable performance but face severe memory constraints on edge devices. Existing offloading strategies struggle with I/O bottlenecks due to the dynamic, low-information nature of autoregressive expert activation. In this paper, we propose to repurpose Speculative Decoding (SD) not merely as a compute accelerator, but as an informative lookahead sensor for memory management, supported by our theoretical and empirical analyses. Hence, we introduce MoE-SpAc, an MoE inference framework that integrates a Speculative Utility Estimator to track expert demand, a Heterogeneous Workload Balancer to dynamically partition computation via online integer optimization, and an Asynchronous Execution Engine to unify the prefetching and eviction in the same utility space. Extensive experiments on seven benchmarks demonstrate that MoE-SpAc achieves a **42%** improvement in TPS over the SOTA SD-based baseline, and an average **4.04x** speedup over all standard baselines.
 
 ## Implementation Based on llama.cpp
